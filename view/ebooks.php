@@ -28,26 +28,27 @@
     </div>
 
     <h3>Toda la actualidad en eBook</h3>
-      <div class="ebook">
+      <!--<div class="ebook">
         <a target="_blank" href="https://www.casadellibro.com/libro-la-espada-del-destino-saga-geralt-de-rivia-2-edicion-coleccion-ista/9788498890433/1693161">
       <img src="../img/1.jpg" alt="ebook 1">
-      <div>La espada del destino</div>
-    </div>
-     <div class="ebook">
-      <a target="_blank" href="https://www.casadellibro.com/libro-el-ultimo-deseo-saga-geralt-de-rivia-1rustica/9788498891270/11204577">
-      <img src="../img/2.jpg" alt="ebook 1">
-      <div>El ultimo deseo</div>
-    </div>
-     <div class="ebook">
-      <a target="_blank" href="https://witcher.fandom.com/es/wiki/La_torre_de_la_golondrina">
-       <img src="../img/3.jpg" alt="ebook 1">
-       <div>La torre de la Golondrina</div>
-    </div>
-     <div class="ebook">
-      <a target="_blank" href="https://www.amazon.es/Ultimo-deseo-Geralt-Alamut-Fantástica/dp/8498890373">
-      <img src="../img/4.jpg" alt="ebook 1">
-      <div>El ultimo deseo 2</div>
-    </div>
+        <div>La espada del destino</div>
+      </div> -->
+
+      <?php
+        include '../services/connection.php';
+
+        $result = mysqli_query($conn, "SELECT Books.Description, Books.img, Books.Title FROM Books WHERE eBook != '0'");
+
+        if (!empty($result) && mysqli_num_rows($result) > 0){
+          while ($row = mysqli_fetch_array($result)){
+            echo "<div class='ebook'>";
+            echo "<img src=../img/".$row['img']." alt'".$row['Title']."'>";
+            echo "</div>";
+          }
+        } else {
+          echo "0 resultados";
+        }
+      ?>
 </div>
 
 <div class="column right">
