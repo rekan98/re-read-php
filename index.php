@@ -32,12 +32,9 @@
   <div class="column right">
     <h2>Top ventas</h2>
 <?php
- //Conexion a BDE
  include "services/connection.php";
- //Seleccion y muestra de base de datos
  $result = mysqli_query($conn, "SELECT Books.Title FROM Books WHERE Top = '1'");
  if(!empty($result) && mysqli_num_rows($result) > 0) {
-  //Datos de salirda de cada fila (fila = row)
   while ($row = mysqli_fetch_array($result)) {
     echo "<p>".$row['Title']."</p>";
   }
