@@ -14,9 +14,10 @@
 <div class="header">
   <h1>Re-Read</h1>
   <p>En Re-Read podrás encontrar libros de segunda mano en perfecto estado. También vender los tuyos. Porque siempre hay libros leídos y libros por leer. Por eso Re-compramos y Re-vendemos para que nunca te quedes sin ninguno de los dos.</p>
+
+
+
 </div>
-
-
 <div class="row">
  <div class="column left">
   <div class="topnav">
@@ -25,7 +26,29 @@
     <a href="eBooks.php">eBooks</a>
   </div>
     <h2>Toda la actualidad en eBook</h2>
-    <p>Libros casi nuevos a un precio casi imposible.</p>
+    <div>
+      <form action="ebooks.php" method="post">
+        <label for="fautor">Autor</label>
+      <input type="text" id="fautor" name="fautor" placeholder="Nombre autor">
+        <!-- <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select> -->
+      <input type="submit" value="Buscar">
+  </form>
+</div>
+<?php
+    isset($_POST['fautor']){
+      
+      }else{
+
+    }
+
+?>
 
     <!--<div class="ebook">
       <a href="http://www.sensacine.com/peliculas/pelicula-128759/" target="_blank"><img src="../img/cell.jpeg" alt="ebook 1">
