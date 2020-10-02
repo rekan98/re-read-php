@@ -30,6 +30,9 @@
       <form action="ebooks.php" method="post">
         <label for="fautor">Autor</label>
       <input type="text" id="fautor" name="fautor" placeholder="Nombre autor">
+        <label for="ftitulo">Titulo</label>
+      <input type="text" id="ftitulo" name="ftitulo" placeholder="Nombre titulo">
+        <!-- <label for="lname">Last Name</label>
         <!-- <label for="lname">Last Name</label>
       <input type="text" id="lname" name="lastname" placeholder="Your last name.."> -->
       <label for="country">Country</label>
